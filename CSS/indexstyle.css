@@ -1,0 +1,84 @@
+body{
+    background-color: #303030;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+}
+#container{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 35px;
+}
+.rectangle{
+    width: 960px;
+    margin: 15x;
+}
+.square{
+    width: 1000px;
+}
+#logo{
+    float: left;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 45px;
+    width: 500px;
+}
+#zegar{
+    float: left;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 65px;
+    margin-top: 15px;
+    margin-left: 200px;
+}
+.tile1{
+    margin: 10px;
+    width: 480px;
+    height: 230px;
+    background-color: #48b931;
+    float: left;
+    text-align: center;
+}
+.tile1:hover{
+    background-color: #257c16;
+}
+.tile2{
+    margin: 10px;
+    width: 480px;
+    height: 230px;
+    background-color: #c92222;
+    float: left;
+    text-align: center;
+}
+.tile2:hover{
+    background-color: #851717;
+}
+ 
+.tile3{
+    margin: 10px;
+    width: 480px;
+    height: 230px;
+    background-color: #2886dd;
+    float: left;
+    text-align: center;
+}
+.tile3:hover{
+    background-color: #1a558b;
+}
+
+.tile4{
+    margin: 10px;
+    width: 480px;
+    height: 230px;
+    background-color: #8300fd;
+    float: left;
+    text-align: center;
+}
+.tile4:hover{
+    background-color: #5600a7;
+}
+a.tilelink{
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    width: 480px;
+    height: 230px;
+}
