@@ -13,6 +13,35 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap" rel="stylesheet">
         <script src="timer.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	
+	    <script src="scroll.js"></script>
+	
+	<script>
+		
+		jQuery(function($)
+		{
+			//zresetuj scrolla
+			$.scrollTo(0);
+			
+			$('#link1').click(function() { $.scrollTo($('#1link'), 500); });
+			$('#link2').click(function() { $.scrollTo($('#2link'), 500); });
+			$('#link3').click(function() { $.scrollTo($('#3link'), 500); });
+			$('#link4').click(function() { $.scrollTo($('#4link'), 500); });
+		}
+		);
+		
+		//pokaż podczas przewijania
+		$(window).scroll(function()
+		{
+			if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+			else $('.scrollup').fadeOut();		
+		}
+		);
+	
+	
+	</script>
         </head>
     <body onload="odliczanie();">
         <div id="container">
@@ -26,7 +55,16 @@
             </div>
             <div class="articles">
                 <article>
-                    <h2>Strach, złość i lęk, to koledzy z jednej klasy.</h2>
+                    <nav>
+                    <h2>Spis treści:</h2>
+                        <a id="link1" href="#">1.Strach, złość i lęk, to koledzy z jednej klasy.</a><br />
+                        <a id="link2" href="#">2.Dlaczego 20, 30, a nawet 40-latkowie mieszkają z rodzicami?</a><br />
+                        <a id="link3" href="#">3.Czy w szkołach istnieje przemoc?</a><br />
+                        <a id="link4" href="#">4.Twój przyjaciel lęk.</a><br />
+                    </nav>
+                </article>
+                <article>
+                    <h2 id="1link">Strach, złość i lęk, to koledzy z jednej klasy.</h2>
                     <h4>Tekst: Dorota Szlama</h4>
                 <b> Strach</b> często przekształca się w lęk, który utrudnia funkcjonowanie. Jest różnica pomiędzy<br />
                     strachem, a lękiem. <b>Strach</b> jest potrzebny do przetrwania, np. aby przejść przez przejście dla<br />
@@ -87,7 +125,7 @@
                     swojej władzy.<br />
                 </article>
                 <article>
-                    <h2>Dlaczego 20, 30, a nawet 40-latkowie mieszkają z rodzicami?</h2>
+                    <h2 id="2link">Dlaczego 20, 30, a nawet 40-latkowie mieszkają z rodzicami?</h2>
                     <h4>Tekst: Dorota Szlama</h4>
                     Pokolenie dzieci, które mieszkają z rodzicami przedłuża się o kolejne lata. W XIX i XX wieku były rodziny<br />
                     wielopokoleniowe. Mieszkali w jednym gospodarstwie, uprawiali ziemię. Różnica polega na tym, że wówczas<br />
@@ -235,7 +273,7 @@
                     Dotarcie do prawdziwego Ja ułatwi wiele wyborów w zgodzie ze sobą. A nie pod wpływem rodziców czy wzorców kulturowych.<br />
                 </article>
                 <article>
-                    <h2>Czy w szkołach istnieje przemoc?</h2>
+                    <h2 id="3link">Czy w szkołach istnieje przemoc?</h2>
                     <h4>Tekst: Dorota Szlama</h4>
                 Polska szkoła XXI wieku – spełnia oczekiwania, a może wiele spraw zamiatanych jest pod dywan?<br />
                 Głównym zadaniem szkoły jest nauczanie, na drugim miejscu mamy wychowanie. Obecnie w szkołach jest dużo<br />
@@ -359,7 +397,7 @@
                 kontaktu. Więcej ziaren wydaje bogatsze plony.<br />
                 </article>
                 <article>
-                    <h2>Twój przyjaciel lęk.</h2>
+                    <h2 id="4link">Twój przyjaciel lęk.</h2>
                     <h4>Tekst: Dorota Szlama</h4>
                     Co to jest lęk? Lęk można zdefiniować jako jedną z najbardziej widocznych i wszechobecnych emocji. Polega na<br /> 
                     nieprzyjemnym napięciu, nerwowym oczekiwaniu na zagrażające, ale niejasne zdarzenie (Rachman 2005).<br />

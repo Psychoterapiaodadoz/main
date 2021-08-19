@@ -13,6 +13,35 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap" rel="stylesheet">
         <script src="timer.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	
+	    <script src="scroll.js"></script>
+	
+	<script>
+		
+		jQuery(function($)
+		{
+			//zresetuj scrolla
+			$.scrollTo(0);
+			
+			$('#link1').click(function() { $.scrollTo($('#1link'), 500); });
+			$('#link2').click(function() { $.scrollTo($('#2link'), 500); });
+			$('#link3').click(function() { $.scrollTo($('#3link'), 500); });
+			$('#link4').click(function() { $.scrollTo($('#4link'), 500); });
+		}
+		);
+		
+		//pokaż podczas przewijania
+		$(window).scroll(function()
+		{
+			if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+			else $('.scrollup').fadeOut();		
+		}
+		);
+	
+	
+	</script>
         </head>
     <body onload="odliczanie();">
         <div id="container">
@@ -26,7 +55,16 @@
             </div>
             <div class="articles">
                 <article>
-                <h2>Bajka o brzydkim kaczątku</h2>
+                    <nav>
+                        <h2>Spis treści:</h2>
+                        <a id="link1" href="#">1.Bajka o brzydkim kaczątku</a><br />
+                        <a id="link2" href="#">2.Bajka o sile</a><br />
+                        <a id="link3" href="#">3.Królestwo</a><br />
+                        <a id="link4" href="#">4.Dziewczynka płacze za kotem, „Focia już nie wróci”</a><br />
+                    </nav>
+                </article>
+                <article>
+                <h2 id="1link">Bajka o brzydkim kaczątku</h2>
                 <h4>Tekst: Dorota Szlama</h4>
                 Dawno temu, a może wcale nie, tak dawno przyszło na świat Kaczątko. Przyszło, bo matka wcale nie wiedziała, czy<br />
                 chce go urodzić. Pomyślała, że jak już przyszło, to wypuści go na świat. Pomyślała i tak zrobiła, choć wszystkim<br />
@@ -73,7 +111,7 @@
                 siebie. Czasem tylko mu smutno, że go los tak doświadczył.<br />           
                 </article>    
                 <article>
-                    <h2>Bajka o sile</h2>
+                    <h2 id="2link">Bajka o sile</h2>
                     <h4>Tekst: Dorota Szlama</h4>
                     Dawno temu żyło sobie zwięrzątko o imieniu Kamień, urodził się gdy rodzice już nie byli młodzi, przyszedł na świat<br />
                     i rósł w przekonaniu, że wszystko mu wolno, a rodzice kochają go nad życie. Turlał się po ziemi, bawił z innymi<br />
@@ -103,7 +141,7 @@
                     życie w zgodzie z własną naturą.<br />
                 </article>
                 <article>
-                    <h2>Królestwo</h2>
+                    <h2 id="3link">Królestwo</h2>
                     <h4>Tekst: Dorota Szlama</h4>
                     Dawno, dawno temu, a może nie tak dawno żył Król. Królestwo jego było piękne. Zamek mieścił duży dwór.<br />
                     Mieszkali tam doradcy króla, dworzanie. Nieopodal zamku poddani, którzy uprawiali Królowi ziemie, wielu<br /> 
@@ -156,7 +194,7 @@
                     Nieraz jeszcze odwiedzą Królestwo Rodziców.<br />  
                 </article>
                 <article>
-                    <h2>Dziewczynka płacze za kotem, „Focia już nie wróci”</h2>
+                    <h2 id="4link">Dziewczynka płacze za kotem, „Focia już nie wróci”</h2>
                     <h4>Tekst: Dorota Szlama</h4>
                     Ania, gdy była mała dostała kotka, a właściwie znalazła go pod domem. Był mamy, puszysty i<br />
                     miauczał. Potrzebował opieki. Ania zabrała go ze sobą. Mama nie pozwoliła jej go trzymać w<br />

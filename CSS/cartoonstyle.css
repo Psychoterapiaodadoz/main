@@ -48,3 +48,10 @@ a.tilelink{
     text-decoration: none;
     display: block;
 }
+nav a{
+    color: #ffffff;
+    text-decoration: none;
+}
+nav a:hover{
+    text-decoration: underline;
+}
